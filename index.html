@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>LL TMS assignment</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+		<script src="js/jquery.timepicker.min.js"></script>
+		<link rel="stylesheet" href="css/jquery.timepicker.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/script.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+
+  <body>
+		<div class="container">
+			<h4 class="text-center py-3"> Create calendar events </h4>
+			<form class="calendar-form" method="post">
+				<div class="form-group">
+					<label for="inputName">Name</label>
+					<input type="text" class="form-control" id="inputName" name="inputName" placeholder="Name" required>
+				</div>
+				<div class="form-group">
+						<label for="inputPhone">Phone</label>
+						<input type="tel" class="form-control" id="inputPhone" name="inputPhone" placeholder="000/000-00-00" pattern="^\d{3}\/\d{3}-\d{2}-\d{2}$" required>
+					</div>
+				<div class="form-group">
+					<label for="inputEmail">Email</label>
+					<input type="text" class="form-control" id="inputEmail" name="inputEmail" placeholder="email@domain.com" pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$" required>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="form-group">
+							<label for="inputTime">Time</label>
+							<input type="text" class="form-control" id="inputTime" name="inputTime" placeholder="Time" required>
+						</div>
+					</div>
+					<div class="col">
+						<div class="form-group">
+							<label for="inputDate">Date</label>
+							<input type="text" class="form-control" id="inputDate" name="inputDate" placeholder="yy-mm-dd" required>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="inputNote">Note</label>
+					<textarea class="form-control" id="inputNote" name="inputNote" rows="3"></textarea>
+				</div>
+				
+				<div class="g-recaptcha pb-3" data-sitekey="6LexkfwUAAAAAI99tXW7Jolkq9wpi1arHBpPS0Ep"></div>
+
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</body>
+</html>
